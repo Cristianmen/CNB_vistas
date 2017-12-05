@@ -10,6 +10,8 @@ import { ErrorComponent } from './error/error.component';
 import { ContactoComponent } from './contacto/contacto.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import { LogoutComponent } from './logout/logout.component';
+import { CabeceraComponent } from './cabecera/cabecera.component';
 
 const routes: Routes = [
   { path: 'Administrador', component: MenuAdminComponent },
@@ -26,7 +28,9 @@ const routes: Routes = [
     MenuAdminComponent,
     MenuOperadorComponent,
     ErrorComponent,
-    ContactoComponent
+    ContactoComponent,
+    LogoutComponent,
+    CabeceraComponent
   ],
   imports: [
     BrowserModule
