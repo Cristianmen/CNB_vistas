@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'Login', component: LoginComponent },
   { path: 'Error', component: ErrorComponent },
   { path: 'Contacto', component: ContactoComponent },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: '**', redirectTo: 'Login', pathMatch: 'full' }
 ];
 @NgModule({
   declarations: [
