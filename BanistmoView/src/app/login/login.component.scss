@@ -1,0 +1,132 @@
+/*    --------------------------------------------------
+	:: Login Section
+    -------------------------------------------------- */
+    $primaryColor: #00448D;
+    $secondColor: #FFD200;
+    $secondColor: #ED1B29;
+    $colorGreyDark: #333333;
+    $colorGrey: #CCCCCC;
+    $colorWhite: #ffffff;
+    $colorGrey2: #ccc5c52b;
+
+
+    #login {
+        padding-top: 50px
+    }
+
+
+    .form-wrap {
+        margin: 0 auto;
+        align-content: center;
+        align-items: center;
+        align-self: center;
+    }
+
+    img {
+        align-content: center;
+        width: 20%;
+        height: 20%;
+    }
+
+    h1 {
+        color: $primaryColor;
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 20px;
+        font-size: 50px
+    }
+
+    h3 {
+        color: $primaryColor;
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 20px;
+        font-size: 15px
+    }
+
+    .form-group {
+        @extend .form-wrap;
+        margin-bottom: 25px;
+    }
+
+    .textHeader {
+        @extend .form-wrap;
+        font-size: 20px;
+        font-style: courier;
+        width: 70%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .checkbox {
+        margin-bottom: 20px;
+        position: relative;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+    }
+
+    .textInputF {
+        background-color: $colorGrey2;
+        padding: 10px;
+        height: 50px;
+        width: 300px;
+    }
+    .checkbox.show:before {
+        content: '\e013';
+        color: primaryColor;
+        font-size: 17px;
+        margin: 1px 0 0 3px;
+        position: absolute;
+        pointer-events: none;
+        font-family: 'Glyphicons Halflings';
+    }
+    
+    
+    .btn.btn-custom {
+        @extend .form-wrap;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .forget {
+        font-size: 13px;
+        text-align: center;
+        display: block;
+    }
+    
+    /*    --------------------------------------------------
+        :: Inputs & Buttons
+        -------------------------------------------------- */
+    
+    .form-control {
+        color: #212121;
+        @extend .form-wrap;
+    }
+    .btn-custom {
+        color: $colorWhite;
+        background-color: $primaryColor;
+    }
+    .btn-custom:hover,
+    .btn-custom:focus {
+        color: $colorWhite;
+    }
+    
+    /*    --------------------------------------------------
+        :: Footer
+        -------------------------------------------------- */
+    /* 
+    #footer {
+        color: #6d6d6d;
+        font-size: 12px;
+        text-align: center;
+    }
+    #footer p {
+        margin-bottom: 0;
+    }
+    #footer a {
+        color: inherit;
+    }
+
+    */
