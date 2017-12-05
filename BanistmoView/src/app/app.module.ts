@@ -9,7 +9,16 @@ import { MenuOperadorComponent } from './menu-operador/menu-operador.component';
 import { ErrorComponent } from './error/error.component';
 import { ContactoComponent } from './contacto/contacto.component';
 
+import { RouterModule, Routes } from '@angular/router';
 
+const routes: Routes = [
+  { path: 'Administrador', component: MenuAdminComponent },
+  { path: 'Operario', component: MenuOperadorComponent },
+  { path: 'Login', component: LoginComponent },
+  { path: 'Error', component: ErrorComponent },
+  { path: 'Contacto', component: ContactoComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' }
+];
 @NgModule({
   declarations: [
     AppComponent,
