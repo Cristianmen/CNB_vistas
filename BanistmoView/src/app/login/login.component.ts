@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  model: any = {};
+  loading = false;
+  returnUrl: string;
+
   constructor() { }
 
   ngOnInit() {
@@ -14,4 +19,17 @@ export class LoginComponent implements OnInit {
   enviar(){
     alert("click");
   }
+
+  login() {
+    this.loading = true;
+    /* this.authenticationService.login(this.model.username, this.model.password)
+        .subscribe(
+            data => {
+                this.router.navigate([this.returnUrl]);
+            },
+            error => {
+                this.alertService.error(error);
+                this.loading = false;
+            }); */
+}
 }

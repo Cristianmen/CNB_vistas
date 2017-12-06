@@ -9,20 +9,17 @@
           pagos y recargas</p>
       </div>
       <h3>Iniciar Sesión</h3>
-      <form class="form-wrap" role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
+      <form class="form-wrap" role="form" (ngSubmit)="login()" method="post" id="login-form" autocomplete="off">
+
         <div class="form-group col-xs-12 col-sm-8 col-md-6 col-lg-4 text-center">
           <label for="email" class="sr-only">Usuario</label>
-          <input type="email" name="email" id="email" class="form-control textInputF" placeholder="Usuario">
+          <input type="email" name="email" id="email" class="form-control textInputF  inputUser " placeholder="Usuario">
+          
         </div>
         <div class="form-group col-xs-12 col-sm-8 col-md-6 col-lg-4 text-center">
           <label for="key" class="sr-only">Contraseña</label>
-          <input type="password" name="key" id="key" class="form-control textInputF" placeholder="Contraseña">
+          <input type="password" name="key" id="key" class="form-control textInputF inputPass " placeholder="Contraseña">
         </div>
-        <!-- <div class="checkbox">
-                          <span class="character-checkbox" onclick="showPassword()"></span>
-                          <span class="label">Show password</span>
-                      </div> -->
-
 
         <div class="btn-custom col-md-2 col-lg-2" (click)="enviar()">
           
