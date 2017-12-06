@@ -8,6 +8,7 @@
     $colorGrey: #CCCCCC;
     $colorWhite: #ffffff;
     $colorGrey2: #ccc5c52b;
+    $colorGreyText: #6d6d6d;
 
 
     #login {
@@ -41,7 +42,7 @@
         text-align: center;
         font-weight: bold;
         padding-bottom: 20px;
-        font-size: 15px
+        font-size: 100%;
     }
 
     .form-group {
@@ -51,7 +52,7 @@
 
     .textHeader {
         @extend .form-wrap;
-        font-size: 20px;
+        font-size: 150%;
         font-style: courier;
         width: 70%;
         text-align: center;
@@ -71,8 +72,6 @@
     .textInputF {
         background-color: $colorGrey2;
         padding: 10px;
-        height: 50px;
-        width: 300px;
     }
     .checkbox.show:before {
         content: '\e013';
@@ -116,11 +115,12 @@
     /*    --------------------------------------------------
         :: Footer
         -------------------------------------------------- */
-    /* 
+     
     #footer {
-        color: #6d6d6d;
+        color: $colorGreyText;
         font-size: 12px;
         text-align: center;
+        @extend .form-wrap;
     }
     #footer p {
         margin-bottom: 0;
@@ -129,4 +129,4 @@
         color: inherit;
     }
 
-    */
+    
