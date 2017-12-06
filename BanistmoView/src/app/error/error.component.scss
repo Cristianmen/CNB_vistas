@@ -1,23 +1,16 @@
 $AzulBanistmo: rgb(12 , 33, 116);
+$color_letra_error:  rgb(167, 30, 34);
 
 
 
 .BarraError{
 
-color:  rgb(167, 30, 34);
+color: $color_letra_error;
 background: rgb(249, 223,226);
 border-style: solid;
 border-width: 1px;
 border-color: rgb(190, 69, 73);
 border:solid 1px rgb(167, 30, 34);
-
-
-
-}
-
-.TextoError {
-
-    color: $AzulBanistmo;
 
 
 
