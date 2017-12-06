@@ -68,13 +68,24 @@ $Azul: rgb(0,64,138);
 }
   
   .icon{
-    font-size: 70px;
+    font-size: 45px;
     cursor:pointer;    
     float: left;
-    margin: 8% 5% 0 5%;
+    margin: 20% 5% 0 5%;
     color: $Azul;
     
   }
+  
+@media (min-width: 410px) { 
+    .icon{
+        font-size: 70px;
+        cursor:pointer;    
+        float: left;
+        margin: 8% 5% 0 5%;
+        color: $Azul;
+        
+        }
+    }
 
   .icon-cabecera{
       @extend .fa;
@@ -87,6 +98,21 @@ div{
     
     .titulo{
         font-size: 40px;
+}   
+
+.titulo{
+    font-size: 24px;
+}
+
+@media (min-width: 410px) { 
+.titulo{
+font-size: 28px;
+}
+}
+@media (min-width: 768px) { 
+.titulo{
+    font-size: 40px;
+}
 }   
 
 .sub-titulo{
@@ -146,6 +172,29 @@ div{
         color:$Azul;
     }
 }
+
+
+    
+.cabe{
+        font-size: 16px;
+    }
+
+@media (min-width: 410px) { 
+.cabe{
+    font-size: 20px;
+    }
+}
+@media (min-width: 768px) { 
+    .cabe{
+        font-size: 30px;
+    }
+}   
+
+@media (min-width: 840px) { 
+    .cabe{
+        font-size: 40px;
+    }
+}   
 
 .fondo-elemento{
     background-image: url('/assets/image/logo-banis.png');
