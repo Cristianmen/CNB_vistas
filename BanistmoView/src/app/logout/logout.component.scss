@@ -8,7 +8,6 @@ cursor: pointer;
 
 .Estilo{
     color: rgb(71, 82, 94);
-    font-size : 16px; 
     
 }
 
@@ -20,15 +19,17 @@ cursor: pointer;
     border-width: 1px;
     border-color: rgb(230, 230, 230);
     font-size: 30px;
-      
-     }
-
-     
-    @media (min-width:900px){        
-        .Estilo{
-            font-size: 35px;
-        }
-            
+   
+    
+    
+    
     }
 
+.TextoError {
+    
+        color: $AzulBanistmo;
+    
+    
+    
+    }
 
