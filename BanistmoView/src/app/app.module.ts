@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -30,15 +30,10 @@ const routes: Routes = [
     ErrorComponent,
     ContactoComponent,
     LogoutComponent,
-    CabeceraComponent,
+    CabeceraComponent
   ],
   imports: [
-    BrowserModule,
-    RouterModule.forRoot(
-      routes,
-      { enableTracing: true } // <-- debugging purposes only
-    ),
-    FormsModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
