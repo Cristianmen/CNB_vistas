@@ -17,10 +17,9 @@ const routes: Routes = [
   { path: 'Administrador', component: MenuAdminComponent },
   { path: 'Operario', component: MenuOperadorComponent },
   { path: 'Login', component: LoginComponent },
+  { path: 'Error', component: ErrorComponent },
   { path: 'Contacto', component: ContactoComponent },
-  { path: 'error', component: ErrorComponent },
-  { path: 'logout', component: LogoutComponent },
-  { path: '**', redirectTo: 'Login', pathMatch: 'full' }
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 @NgModule({
   declarations: [

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CabeceraComponent} from '../cabecera/cabecera.component';
 
 @Component({
   selector: 'app-menu-admin',
@@ -9,7 +8,7 @@ import { CabeceraComponent} from '../cabecera/cabecera.component';
 export class MenuAdminComponent implements OnInit {
 
   constructor() { }
-  
+
   ngOnInit() {
   }
 
