@@ -1,14 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { MenuOperadorComponent } from './menu-operador/menu-operador.component';
 import { ErrorComponent } from './error/error.component';
 import { ContactoComponent } from './contacto/contacto.component';
-
 import { RouterModule, Routes } from '@angular/router';
 import { LogoutComponent } from './logout/logout.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
@@ -19,7 +16,7 @@ const routes: Routes = [
   { path: 'Login', component: LoginComponent },
   { path: 'Error', component: ErrorComponent },
   { path: 'Contacto', component: ContactoComponent },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: '**', redirectTo: '/Login', pathMatch: 'full' }
 ];
 @NgModule({
   declarations: [
