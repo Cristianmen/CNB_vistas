@@ -1,99 +1,85 @@
+$primaryColor: #00448D;
+$secondColor: #FFD200;
+$secondColor: #ED1B29;
+$colorGreyDark: #333333;
+$colorGrey: #CCCCCC;
+$colorWhite: #ffffff;
+$colorGrey2: #ccc5c52b;
+$colorGreyText: #6d6d6d;
+$colorLightGray: #EEE;
+$rutaFuente: '/assets/fontsLogin/icomoon';
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url($rutaFuente + '.eot?z5lcxq');
+    src:  url($rutaFuente + '.eot?z5lcxq#iefix') format('embedded-opentype'),
+      url($rutaFuente + '.ttf?z5lcxq') format('truetype'),
+      url($rutaFuente + '.woff?z5lcxq') format('woff'),
+      url($rutaFuente + '.svg?z5lcxq#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
 /*    --------------------------------------------------
 	:: Login Section
     -------------------------------------------------- */
-    $primaryColor: #00448D;
-    $secondColor: #FFD200;
-    $secondColor: #ED1B29;
-    $colorGreyDark: #333333;
-    $colorGrey: #CCCCCC;
-    $colorWhite: #ffffff;
-    $colorGrey2: #ccc5c52b;
-    $colorGreyText: #6d6d6d;
-    $colorLightGray: #EEE;
-    $rutaFuente: '/assets/fontsLogin/icomoon';
-
-    @font-face {
-        font-family: 'icomoon';
-        src:  url($rutaFuente + '.eot?z5lcxq');
-        src:  url($rutaFuente + '.eot?z5lcxq#iefix') format('embedded-opentype'),
-          url($rutaFuente + '.ttf?z5lcxq') format('truetype'),
-          url($rutaFuente + '.woff?z5lcxq') format('woff'),
-          url($rutaFuente + '.svg?z5lcxq#icomoon') format('svg');
-        font-weight: normal;
-        font-style: normal;
-      }
-      
-      [class^="icon-"], [class*=" icon-"] {
-        /* use !important to prevent issues with browser extensions that change fonts */
-        font-family: 'icomoon' !important;
-        speak: none;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-      
-        /* Better Font Rendering =========== */
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-      
-      
-
-      .icon-user:before {
-        content: "\e971";
-        float: left;
-        
-      }
-      .icon-lock:before {
-        content: "\e98f";
-      }
-      
     #login {
         padding-top: 50px
     }
 
-
+    .btn.btn-custom {
+        @extend .form-wrap;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
     .form-wrap {
         margin: 0 auto;
         align-content: center;
         align-items: center;
         align-self: center;
     }
-
-    img {
-        align-content: center;
-        width: 20%;
-        height: 20%;
+    
+    .form-group {
+        @extend .form-wrap;
+        margin-bottom: 25px;
     }
 
-    @media (min-width: 410px) { 
-        h1 {
-            color: $primaryColor;
-            text-align: center;
-            font-weight: bold;
-            padding-bottom: 20px;
-            font-size: 20px
-        }
+    .forget {
+        font-size: 13px;
+        text-align: center;
+        display: block;
+        color: $colorGreyText;
     }
+
+    .forget:focus
+    .forget:hover {
         
-    @media (min-width: 768px) { 
-        
-        h1 {
-            color: $primaryColor;
-            text-align: center;
-            font-weight: bold;
-            padding-bottom: 20px;
-            font-size: 30px
-        }
+        color: $primaryColor;
     }
-
+      
     h1 {
         color: $primaryColor;
         text-align: center;
         font-weight: bold;
         padding-bottom: 20px;
-        font-size: 50px
     }
     
 
@@ -105,9 +91,66 @@
         font-size: 100%;
     }
 
-    .form-group {
-        @extend .form-wrap;
-        margin-bottom: 25px;
+    .header2{
+        font-size: 24px;
+        margin-top: 15px;
+    }
+
+    @media (min-width: 310px) { 
+        .header2{
+            font-size: 12px;
+        }
+    }
+    
+    @media (min-width: 410px) { 
+        .header2{
+            font-size: 17px;
+        }
+    }
+
+    @media (min-width: 768px) { 
+        .header2{
+            font-size: 24px;
+        }
+    }
+
+
+    .header1{
+        font-size: 50px;
+    }
+
+    @media (min-width: 310px) { 
+        .header1{
+            font-size: 22px;
+        }
+    }
+    
+    @media (min-width: 410px) { 
+        .header1{
+            font-size: 30px;
+        }
+    }
+
+    @media (min-width: 768px) { 
+        .header1{
+            font-size: 50px;
+        }
+    }
+    
+    .icon-user:before {
+        content: "\e971";
+        float: left;
+        
+    }
+
+    .icon-lock:before {
+        content: "\e98f";
+    }
+    
+    img {
+        align-content: center;
+        width: 20%;
+        height: 20%;
     }
 
     .textHeader {
@@ -119,41 +162,14 @@
         margin-bottom: 50px;
     }
     
-    .checkbox {
-        margin-bottom: 20px;
-        position: relative;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        -o-user-select: none;
-        user-select: none;
-    }
-
     .textInputF {
         background-color: $colorGrey2;
         padding: 10px;
     }
-    .checkbox.show:before {
-        content: '\e013';
-        color: primaryColor;
-        font-size: 17px;
-        margin: 1px 0 0 3px;
-        position: absolute;
-        pointer-events: none;
-        font-family: 'Glyphicons Halflings';
-    }
+        
     
     
-    .btn.btn-custom {
-        @extend .form-wrap;
-        font-size: 14px;
-        margin-bottom: 20px;
-    }
-    .forget {
-        font-size: 13px;
-        text-align: center;
-        display: block;
-    }
+    
     
     /*    --------------------------------------------------
         :: Inputs & Buttons
@@ -191,13 +207,28 @@
         
     }
 
+    .inputUser{
+        background-image: url('/assets/img/userGrey.png');
+        background-size: 20px 20px;
+        background-position: 5px;
+        background-repeat: no-repeat;
+        padding-left:10%;
+    }
+    .inputPass{
+        background-image: url('/assets/img/lockGrey.png');
+        background-size: 20px 20px;
+        background-position: 5px;
+        background-repeat: no-repeat;
+        padding-left:10%;
+    }
+
     .spanBtn {
         @extend .form-wrap;
     }
 
     .textBtn {
         margin-top: 14px;
-    }
+    }   
     
     /*    --------------------------------------------------
         :: Footer
@@ -214,19 +245,4 @@
     }
     #footer a {
         color: inherit;
-    }
-
-    .inputUser{
-        background-image: url('/assets/img/user.png');
-        background-size: 20px 20px;
-        background-position: 5px;
-        background-repeat: no-repeat;
-        padding-left:10%;
-    }
-    .inputPass{
-        background-image: url('/assets/img/lock.png');
-        background-size: 20px 20px;
-        background-position: 5px;
-        background-repeat: no-repeat;
-        padding-left:10%;
     }

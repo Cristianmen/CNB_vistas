@@ -1,55 +1,48 @@
+<!-- section for header and login form  -->
 <section id="login">
   <div class="container">
-    <!-- <div class="row"> -->
     <div>
-      <img src="../../assets/img/logo.png" />
-      <h1>Corresponsal No Bancario</h1>
-      <div class="textHeader col-xs-12">
-        <p>A través de este portal usted podrá acceder a su CNB y ofrecer a sus clientes transacciones como retiro, depósito,
+      <!--<img src="../../assets/img/logo.png" />
+      <h1 class="header1">Corresponsal No Bancario</h1>--> 
+      <app-cabecera></app-cabecera>
+      <div class=" col-xs-12">
+        <p class="header2 text-center">A través de este portal usted podrá acceder a su CNB y ofrecer a sus clientes transacciones como retiro, depósito,
           pagos y recargas</p>
+          <br>
       </div>
+      <app-error *ngIf= error></app-error>
+      
       <h3>Iniciar Sesión</h3>
       <form class="form-wrap" role="form" (ngSubmit)="login()" method="post" id="login-form" autocomplete="off">
 
         <div class="form-group col-xs-12 col-sm-8 col-md-6 col-lg-4 text-center">
-          <label for="email" class="sr-only">Usuario</label>
-          <input type="email" name="email" id="email" class="form-control textInputF  inputUser " placeholder="Usuario">
+          <label for="username" class="sr-only">Usuario</label>
+          <input type="text" name="username" id="username" class="form-control textInputF  inputUser " placeholder="Usuario" [(ngModel)] = "username" (change)="Cambio()">
           
         </div>
         <div class="form-group col-xs-12 col-sm-8 col-md-6 col-lg-4 text-center">
           <label for="key" class="sr-only">Contraseña</label>
-          <input type="password" name="key" id="key" class="form-control textInputF inputPass " placeholder="Contraseña">
+          <input type="password" name="key" id="key" class="form-control textInputF inputPass " placeholder="Contraseña" [(ngModel)] = "password" (change)="Cambio()">
         </div>
 
-        <div class="btn-custom col-md-2 col-lg-2" (click)="enviar()">
-          
-          <p class="textBtn">Ingresar</p>
-          <!-- <span class="spanBtn col-md-2 col-lg-2" style="margin:2em 0 0 2em"> Ingresar </span> -->
-          
-          <input type="submit" id="btn-login" style="display:none" value="Ingresar" onsubmit="enviar()">
+        <div class="btn-custom col-md-2 col-lg-2" (click)="login()">
+          <p class="textBtn">Ingresar</p>          
+          <input type="submit" id="btn-login" style="display:none" value="Ingresar" >
         </div>
-
-        <!-- <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block col-md-2 col-lg-2" value="Ingresar"> -->
-
-
       </form>
-
       <a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">¿Olvidó su contraseña?</a>
       <hr>
     </div>
-    <!-- /.col-xs-12 -->
-    <!--</div>  /.row -->
   </div>
   <!-- /.container -->
 </section>
 
-
+<!-- footer -->
 <footer id="footer">
   <div class="container text-center">
     <div class="row">
       <div class="col-xs-12">
         <p>© Copyright Banistmo S.A. 2017. Todos los Derechos Reservados.</p>
-        <!-- <p>Powered by <strong><a href="http://www.facebook.com/tavo.qiqe.lucero" target="_blank">TavoQiqe</a></strong></p> -->
       </div>
     </div>
   </div>

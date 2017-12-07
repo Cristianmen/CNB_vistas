@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import {ErrorComponent} from '../error/error.component';
+import { CabeceraComponent} from '../cabecera/cabecera.component';
 
 @Component({
   selector: 'app-login',
@@ -8,28 +10,33 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  model: any = {};
-  loading = false;
-  returnUrl: string;
+  username: string;
+  password: string;
+  error:boolean=false;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
   }
-  enviar(){
-    alert("click");
+
+
+
+  Cambio(){
+    console.log(this.username);
+    console.log(this.password);
   }
 
-  login() {
-    this.loading = true;
-    /* this.authenticationService.login(this.model.username, this.model.password)
-        .subscribe(
-            data => {
-                this.router.navigate([this.returnUrl]);
-            },
-            error => {
-                this.alertService.error(error);
-                this.loading = false;
-            }); */
-}
+  /**
+   * Function to validate login
+   */
+  login() {    
+    if(this.username == "admin"){
+      this.router.navigate(['/Administrador']);
+    }else if(this.username == "operador"){
+      this.router.navigate(['/Operario']);
+    }else{
+      this.error=true;
+    }
+  }
 }
