@@ -6,19 +6,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu-operador.component.scss']
 })
 export class MenuOperadorComponent implements OnInit {
-  public mos:boolean= true;
-
+  public semaforo:string= "/assets/semaforo/semaforo_rojo.png";
+  public ventas;
+  public mostrarr;
+  colores=["semaforo_rojo.png","semaforo_amarillo.png","semaforo_verde.png","semaforo_dorado.png"];
+  
   constructor() { }
-
+  
   ngOnInit() {
+    
+    
+    setInterval(()=>{
+      let num = Math.floor(Math.random() * (4 - 0)) + 0;
+      this.ventas= (num+1) +"00"; 
+      this.mostrarr =this.mostrar();   
+      this.semaforo = "/assets/semaforo/"+this.colores[(num)];     
+    }, 2000);
   }
-  OnMost(value){
-
-    if (value==2) {
-      this.mos = false;
-    } else {
-      this.mos = true;
-    }
-  }
+  mostrar(){
+    if(this.ventas=="100" ||this.ventas=="200")
+      return false;
+    else
+     return true;
+  };
+  
+  
 
 }
