@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -17,10 +17,9 @@ const routes: Routes = [
   { path: 'Administrador', component: MenuAdminComponent },
   { path: 'Operario', component: MenuOperadorComponent },
   { path: 'Login', component: LoginComponent },
+  { path: 'Error', component: ErrorComponent },
   { path: 'Contacto', component: ContactoComponent },
-  { path: 'error', component: ErrorComponent },
-  { path: 'logout', component: LogoutComponent },
-  { path: '**', redirectTo: 'Login', pathMatch: 'full' }
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 @NgModule({
   declarations: [
@@ -31,15 +30,10 @@ const routes: Routes = [
     ErrorComponent,
     ContactoComponent,
     LogoutComponent,
-    CabeceraComponent,
+    CabeceraComponent
   ],
   imports: [
-    BrowserModule,
-    RouterModule.forRoot(
-      routes,
-      { enableTracing: true } // <-- debugging purposes only
-    ),
-    FormsModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
