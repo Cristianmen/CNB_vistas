@@ -1,17 +1,33 @@
 $AzulBanistmo: rgb(12 , 33, 116);
 $color_letra_error:  rgb(167, 30, 34);
+$colorBack: rgb(249, 223,226);
 
 
 
-.BarraError{
+.iconError{
 
-color: $color_letra_error;
-background: rgb(249, 223,226);
-border-style: solid;
-border-width: 1px;
-border-color: rgb(190, 69, 73);
-border:solid 1px rgb(167, 30, 34);
-
-
-
+    font-size: 58px;
 }
+.BarraError{
+    font-size: 14px;
+    color: $color_letra_error;
+    background: $colorBack;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(221, 182, 172);
+    
+    }
+
+    @media (min-width:1000px){        
+        .BarraError{
+            font-size: 18px;
+        }
+        .iconError{
+            font-size: 70px;
+        }        
+    }
+
+  
+
+
+
