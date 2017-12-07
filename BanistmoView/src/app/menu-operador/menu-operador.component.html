@@ -1,0 +1,78 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <strong class="col-xs-12 col-sm-6 col-md-4">
+        <h1>Banistmo</h1>
+      </strong>
+      <aside class="col-xs-12 col-sm-6 col-md-8 ">
+        <h1>Corresponsal No Bancario</h1>
+      </aside>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <h2> Menú Principal Operador </h2>
+</div>
+
+<body style="border: 5px solid #1E679A">
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-6 col-md-5 col-lg-3  ">
+      <br>
+      <div class="container">
+        <button class="btn btn-primary btn-lg" (click)= "OnMost(1)">Cupo Disponible</button>
+        <br><br>
+        <button class="btn btn-primary btn-lg" (click)="OnMost(2)">Transacciones </button>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-9 " *ngIf = "mos">
+      semaforo 
+      <button class="btn btn-success">Compensar</button>
+
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-9 " *ngIf = "!mos">
+      <div class="row">
+        <div class="btn_img">
+          <span class="icon-bank-sign "></span>Deposito
+        </div>
+        <div class="btn_img">
+          <span class="icon-burning-dollar-paper-bill"></span>Recargas
+        </div>
+      </div>
+      <div class="row">
+        <div class="btn_img">
+          <span class="icon-dollar-bill-through-cash-machine"></span>Retiros
+        </div>
+        <div class="btn_img">
+          <span class="icon-waving-dollar-bills"></span>Pagos
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-2" style="background-color: blue">
+      <p>esto es unn div </p>
+    </div>
+    <div class="col-md-2" style="background-color: rgb(0, 255, 128)">
+      <p>esto es unn div </p>
+    </div>
+    <div class="col-md-2" style="background-color: rgb(247, 117, 11)">
+      <p>esto es unn div </p>
+    </div>
+    <div class="col-md-2" style="background-color: rgb(229, 255, 0)">
+      <p>esto es unn div </p>
+    </div>
+    <div class="col-md-2" style="background-color: rgb(255, 0, 157)">
+      <p>esto es unn div </p>
+    </div>
+    <div class="col-md-2" style="background-color: blue">
+      <p>esto es unn div </p>
+    </div>
+  </div>
+</div> -->
