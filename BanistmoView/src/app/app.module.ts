@@ -17,9 +17,10 @@ const routes: Routes = [
   { path: 'Administrador', component: MenuAdminComponent },
   { path: 'Operario', component: MenuOperadorComponent },
   { path: 'Login', component: LoginComponent },
-  { path: 'Error', component: ErrorComponent },
   { path: 'Contacto', component: ContactoComponent },
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: 'error', component: ErrorComponent },
+  { path: 'logout', component: LogoutComponent },
+  { path: '**', redirectTo: 'Login', pathMatch: 'full' }
 ];
 @NgModule({
   declarations: [
@@ -33,7 +34,11 @@ const routes: Routes = [
     CabeceraComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(
+      routes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

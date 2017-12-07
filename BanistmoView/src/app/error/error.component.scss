@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 $AzulBanistmo: rgb(12 , 33, 116);
 $color_letra_error:  rgb(167, 30, 34);
@@ -9,10 +10,14 @@ $colorBack: rgb(249, 223,226);
 
     font-size: 42px;
 }
+=======
+$AzulBanistmo: rgb(12 , 33, 116);
+>>>>>>> parent of 7bf134f... Merge branch 'develop' into feature/SP1-HU002-05_12_2017
 
 
 
 .BarraError{
+<<<<<<< HEAD
     font-size: 9px;
     color: $color_letra_error;
     background: $colorBack;
@@ -72,3 +77,24 @@ $colorBack: rgb(249, 223,226);
 
 
 
+=======
+
+color:  rgb(167, 30, 34);
+background: rgb(249, 223,226);
+border-style: solid;
+border-width: 1px;
+border-color: rgb(190, 69, 73);
+border:solid 1px rgb(167, 30, 34);
+
+
+
+}
+
+.TextoError {
+
+    color: $AzulBanistmo;
+
+
+
+}
+>>>>>>> parent of 7bf134f... Merge branch 'develop' into feature/SP1-HU002-05_12_2017
