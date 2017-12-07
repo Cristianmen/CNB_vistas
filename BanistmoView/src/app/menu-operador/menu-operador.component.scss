@@ -1,14 +1,17 @@
 .btn_img{
-    height: 110px;
-    width: 245px;
-    background-image: url(/assets/btnGris_260x110.jpg);
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 27px;
-    padding-top: 25px;
-    padding-right: 30px;
-    padding-left: 30px;
-    margin-bottom: 15px;
-    margin-left: 7%;
+  background-image: url('/assets/image/logo-banis.png');
+  background-position: left;
+  background-size: 80% 100%;
+  background-repeat: no-repeat;
+    // height: 110px;
+    // width: 245px;
+    // font-family: Verdana, Geneva, sans-serif;
+    // font-size: 27px;
+    // padding-top: 25px;
+    // padding-right: 30px;
+    // padding-left: 30px;
+    // margin-bottom: 15px;
+    // margin-left: 7%;
 }
 
 .semaforo{
@@ -29,7 +32,7 @@
 
 
 @font-face {
-    font-family: 'icomoon';
+    font-family: 'operador-icomoon';
     src:  url('/assets/fonts/icomoon.eot?rteypz');
     src:  url('/assets/fonts/icomoon.eot?rteypz#iefix') format('embedded-opentype'),
       url('/assets/fonts/icomoon.ttf?rteypz') format('truetype'),
@@ -41,7 +44,7 @@
   
   [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
+    font-family: 'operador-icomoon' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;

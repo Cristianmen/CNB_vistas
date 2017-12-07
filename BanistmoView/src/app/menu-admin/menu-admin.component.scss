@@ -7,7 +7,7 @@ $Rojo: rgb(254,0,11);
 $Azul: rgb(0,64,138);
 
 @font-face {
-    font-family: 'icomoon';
+    font-family: 'admin-icomoon';
     src:  url($ruta-fuente + 'eot?j2qfl1');
     src:  url($ruta-fuente + '.eot?j2qfl1#iefix') format('embedded-opentype'),
       url($ruta-fuente + '.ttf?j2qfl1') format('truetype'),
@@ -21,7 +21,7 @@ $Azul: rgb(0,64,138);
 
   [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
+    font-family: 'admin-icomoon' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -78,7 +78,7 @@ $Azul: rgb(0,64,138);
   
 @media (min-width: 410px) { 
     .icon{
-        font-size: 70px;
+        font-size: 60px;
         cursor:pointer;    
         float: left;
         margin: 8% 5% 0 5%;
